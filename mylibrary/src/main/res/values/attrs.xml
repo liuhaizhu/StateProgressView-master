@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StateProgressView">
+
+        <attr name="color_line_normal" format="color"/>
+        <attr name="color_line_state" format="color"/>
+        <attr name="line_height" format="dimension"/>
+        <attr name="color_circle_stroke" format="color"/>
+        <attr name="color_circle_fill" format="color"/>
+        <attr name="radius_circle_stroke" format="dimension"/>
+        <attr name="radius_circle_fill" format="dimension"/>
+
+        <attr name="color_text_normal" format="color"/>
+        <attr name="color_text_state" format="color"/>
+        <attr name="text_height" format="dimension"/>
+        <attr name="state_height" format="dimension"/>
+        <attr name="is_line_radius" format="boolean"/>
+
+    </declare-styleable>
+</resources>

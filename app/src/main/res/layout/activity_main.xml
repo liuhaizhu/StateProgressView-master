@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示"/>
+
+    <com.lhz.stateprogress.StateProgressView
+        android:id="@+id/spv_01"
+        android:layout_width="match_parent"
+        app:color_circle_fill="#1296db"
+        app:color_circle_stroke="#dbdbdb"
+        app:color_text_state="#1296db"
+        app:is_line_radius="false"
+        app:color_text_normal="#bfbfbf"
+        app:color_line_state="#1296db"
+        app:color_line_normal="#dbdbdb"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"/>
+
+    <com.lhz.stateprogress.StateProgressView
+        android:id="@+id/spv_02"
+        android:layout_width="match_parent"
+        app:color_circle_fill="@color/colorPrimaryDark"
+        app:color_circle_stroke="@color/colorPrimary"
+        app:color_text_state="#1296db"
+        app:color_text_normal="#bfbfbf"
+        app:radius_circle_fill="16dp"
+        app:radius_circle_stroke="20dp"
+        app:line_height="4dp"
+        app:color_line_state="@android:color/black"
+        app:color_line_normal="#dbdbdb"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"/>
+
+    <com.lhz.stateprogress.StateProgressView
+        android:id="@+id/spv_03"
+        android:layout_width="match_parent"
+        app:color_circle_fill="#d81e06"
+        app:color_circle_stroke="#d81e06"
+        app:line_height="8dp"
+        app:is_line_radius="true"
+        app:radius_circle_fill="12dp"
+        app:radius_circle_stroke="16dp"
+        app:state_height="48dp"
+        app:color_text_normal="#bfbfbf"
+        app:color_line_state="#d81e06"
+        app:color_line_normal="#dbdbdb"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"/>
+</LinearLayout>
