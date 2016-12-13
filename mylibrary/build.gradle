@@ -21,15 +21,6 @@ android {
         }
     }
 }
-
-publish {
-    userOrg = 'liuhaizhu'
-    groupId = 'com.lhz'
-    artifactId = 'StateProgressView'
-    publishVersion = '0.0.1'
-    desc = 'Android View  for show progress of nodes'
-    website = 'https://github.com/liuhaizhu/StateProgressView-master.git'
-}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
