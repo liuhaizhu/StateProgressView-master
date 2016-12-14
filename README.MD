@@ -1,5 +1,4 @@
-![效果图](http://upload-images.jianshu.io/upload_images/1766763-9a768dcb8556db73.gif?imageMogr2/auto-orient/strip)
-
+![效果图](http://upload-images.jianshu.io/upload_images/1766763-afa28117f3c92791.gif?imageMogr2/auto-orient/strip)
 
   >#####实现流程
 
