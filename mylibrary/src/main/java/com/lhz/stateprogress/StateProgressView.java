@@ -30,6 +30,8 @@ import static android.graphics.Color.GREEN;
 public class StateProgressView extends FrameLayout implements OnProgressAnimListener {
 
     private Context mContext;
+    private boolean mIsAddView;
+    private boolean mIsMeasure;
     /**
      * height of line
      */
@@ -172,11 +174,17 @@ public class StateProgressView extends FrameLayout implements OnProgressAnimList
     }
 
     public void startAnim(int stateItemCount, long duration) {
-        addViews();
-        if (mListCircle.size() > 0 && stateItemCount >= 0) {
-            mStateItemCount = stateItemCount;
-            mDuration = duration;
-            mListCircle.get(0).setSmoothPercent(1, mDuration);
+        if(mIsMeasure) {
+            mIsAddView=false;
+            addViews();
+            if (mListCircle.size() > 0 && stateItemCount >= 0) {
+                mStateItemCount = stateItemCount;
+                mDuration = duration;
+                mListCircle.get(0).setSmoothPercent(1, mDuration);
+            }
+        }else {
+            mStateItemCount=stateItemCount;
+            mIsAddView=true;
         }
     }
 
@@ -248,5 +256,13 @@ public class StateProgressView extends FrameLayout implements OnProgressAnimList
             } else if(index+1<mStateItemCount){
                 mListCircle.get(index+1).setSmoothPercent(1, mDuration);
             }
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        mIsMeasure=true;
+        if(mIsAddView)
+        startAnim(mStateItemCount,mDuration);
     }
 }

@@ -23,6 +23,18 @@ public class MainActivity extends AppCompatActivity {
         final StateProgressView stateProgressView01 = (StateProgressView) findViewById(R.id.spv_01);
         final StateProgressView stateProgressView02 = (StateProgressView) findViewById(R.id.spv_02);
         final StateProgressView stateProgressView03 = (StateProgressView) findViewById(R.id.spv_03);
+        //下方带文字 设置节点集合 直接执行
+        stateProgressView01.setItems(list, 4, 200);
+
+        //下方带文字 设置节点集合
+        stateProgressView02.setItems(list);
+        //最后节点的index为2 每个节点动画时长为1000毫秒
+        stateProgressView02.startAnim(2,1000);
+
+
+        //下方不带文字 设置共有四个节点 最后节点的index为2 每个节点动画时长为1000毫秒
+        stateProgressView03.setItems(4);
+        stateProgressView03.startAnim(2,1000);
 
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 stateProgressView03.startAnim(2,1000);
             }
         });
-
     }
+
 }
