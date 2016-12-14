@@ -1,7 +1,6 @@
-
 ![效果图](http://upload-images.jianshu.io/upload_images/1766763-9a768dcb8556db73.gif?imageMogr2/auto-orient/strip)
 
-Github地址<https://github.com/liuhaizhu/StateProgressView-master>
+
   >#####实现流程
 
 * 绘制一个从左到由逐渐填充的圆环
@@ -14,32 +13,33 @@ Github地址<https://github.com/liuhaizhu/StateProgressView-master>
 
 Gradle Dependency
 ```gradle
-compile 'com.lhz:StateProgressView:0.0.2'
+compile 'com.lhz:StateProgressView:1.0.1'
 ```
 > #####Attributes
 
 Declare it inside your layout XML file like this:
 ```xml
-<com.lhz.stateprogress.StateProgressView
+<com.lhz.stateprogress.StateProgressView 
    android:id="@+id/spv"
    android:layout_height="wrap_content"
-   android:layout_width="match_parent"
-   app:color_circle_fill="#d81e06"
-   app:color_circle_stroke="#d81e06"
-   app:line_height="8dp"
-   app:is_line_radius="true"
-   app:radius_circle_fill="12dp"
+   android:layout_width="match_parent"   
+   app:color_circle_fill="#d81e06"   
+   app:color_circle_stroke="#d81e06"  
+   app:line_height="8dp"   
+   app:is_line_radius="true" 
+   app:radius_circle_fill="12dp"  
    app:radius_circle_stroke="16dp"
-   app:state_height="48dp"
-   app:color_text_normal="#bfbfbf"
-   app:color_line_state="#d81e06"
-   app:color_line_normal="#dbdbdb"
+   app:state_height="48dp"   
+   app:color_text_normal="#bfbfbf"   
+   app:color_line_state="#d81e06"    
+   app:color_line_normal="#dbdbdb"   
  />
 ```
 > ##### Set value and Perform the animation
+
 ```java
 final StateProgressView spv= (StateProgressView) findViewById(R.id.spv);
-//下方带文字 设置节点集合 直接执行
+//下方带文字 设置节点集合 最后节点的index为4 直接执行动画 list是String 类型的 index要小于list的数量
 spv.setItems(list, 4, 200);
 //下方带文字 设置节点集合
 spv.setItems(list);
@@ -49,6 +49,3 @@ spv.startAnim(2,1000);
 spv.setItems(4);
 spv.startAnim(2,1000);
 ```
-
-
-
